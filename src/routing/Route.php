@@ -1,8 +1,6 @@
 <?php
 namespace ayutenn\core\routing;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
-
 use ayutenn\core\config\Config;
 use ayutenn\core\routing\Middleware;
 use ayutenn\core\utils\Redirect;

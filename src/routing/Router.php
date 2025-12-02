@@ -1,6 +1,5 @@
 <?php
 namespace ayutenn\core\routing;
-require_once __DIR__ . '/../../vendor/autoload.php';
 
 use ayutenn\core\routing\Route;
 use ayutenn\core\config\Config;

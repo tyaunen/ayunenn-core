@@ -1,8 +1,6 @@
 <?php
 namespace ayutenn\core\database;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
-
 /**
  * 【概要】
  * DBに関わる処理結果を扱うデータストアクラス

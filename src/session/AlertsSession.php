@@ -1,6 +1,5 @@
 <?php
 namespace ayutenn\core\session;
-require_once __DIR__ . '/../../vendor/autoload.php';
 
 /**
  * 【処理概要】

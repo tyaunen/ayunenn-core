@@ -1,7 +1,6 @@
 <?php
 namespace ayutenn\core\requests;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
 use ayutenn\core\requests\Model;
 
 /**

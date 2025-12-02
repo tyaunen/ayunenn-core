@@ -1,7 +1,6 @@
 <?php
 namespace ayutenn\core\requests;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
 use Exception;
 use ayutenn\core\utils\Redirect;
 use ayutenn\core\requests\RequestValidator;

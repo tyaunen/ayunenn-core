@@ -1,7 +1,6 @@
 <?php
 namespace ayutenn\core\config;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
 use Exception;
 
 /**

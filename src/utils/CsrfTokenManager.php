@@ -1,8 +1,6 @@
 <?php
 namespace ayutenn\core\utils;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
-
 /**
  * 【概要】
  * CSRFトークン管理クラス

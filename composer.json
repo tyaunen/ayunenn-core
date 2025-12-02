@@ -1,0 +1,27 @@
+{
+    "name": "ayutenn/core",
+    "description": "ayutennは、御茶請稔によるオレオレフレームワークです。第三者からの利用は想定していません。",
+    "version": "1.0.0",
+    "type": "library",
+    "license": "CC-BY-1.0",
+    "authors": [
+        {
+            "name": "minoru otyauke"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "files": [
+            "src/utils/view_helpers.php"
+        ],
+        "psr-4": {
+            "ayutenn\\core\\": "./src"
+        }
+    },
+    "minimum-stability": "stable"
+}

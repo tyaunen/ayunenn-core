@@ -1,0 +1,7 @@
+{
+    "DEBUG_MODE": false,
+    "BASE_URL": "localhost/ayutenn",
+    "PDO_DSN": "mysql:host=localhost;dbname=ayutennv1;charset=utf8mb4",
+    "PDO_USERNAME": "root",
+    "PDO_PASSWORD": ""
+}

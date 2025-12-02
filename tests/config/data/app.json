@@ -4,9 +4,9 @@
     "DISCORD_WEBHOOK_DEFAULT_ICON": "ayutenn_loginv1",
 
     "URL_ROOT": "/ayutenn",
-    "CONTROLLER_PATH": "/ayutenn/app/controller",
-    "VIEW_PATH": "/ayutenn/app/public/view",
-    "API_PATH": "/ayutenn/app/public/api",
-    "MODEL_PATH": "/ayutenn/app/model",
-    "STORAGE_PATH": "/ayutenn/storage"
+    "CONTROLLER_DIR": "/ayutenn/app/controller",
+    "VIEW_DIR": "/ayutenn/app/public/view",
+    "API_DIR": "/ayutenn/app/public/api",
+    "MODEL_DIR": "/ayutenn/app/model",
+    "STORAGE_DIR": "/ayutenn/storage"
 }

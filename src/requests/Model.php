@@ -42,7 +42,7 @@ class Model
     public function __construct(
         string $format_file_name
     ) {
-        $format_file_path = $_SERVER['DOCUMENT_ROOT'] . rtrim(Config::getAppSetting('MODEL_PATH'). '/') . "{$format_file_name}.json";
+        $format_file_path = $_SERVER['DOCUMENT_ROOT'] . rtrim(Config::getAppSetting('MODEL_DIR'). '/') . "{$format_file_name}.json";
         if (file_exists($format_file_path)) {
             $json = file_get_contents($format_file_path);
             $this->format = json_decode($json, true);

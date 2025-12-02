@@ -152,7 +152,7 @@ class Router
             method: 'GET',
             path: '',
             routeAction: 'view',
-            targetResourceName: Config::getAppSetting('404_PAGE_PATH'),
+            targetResourceName: Config::getAppSetting('404_PAGE_FILE'),
             middleware: []
         );
         $not_found_route->executeRouteAction();

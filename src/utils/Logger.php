@@ -66,7 +66,7 @@ class Logger
     private function __construct(?string $log_path = null)
     {
         if (is_null($log_path)) {
-            $this->logPath = Config::getAppSetting('LOG_PATH');
+            $this->logPath = Config::getAppSetting('LOG_DIR');
         } else {
             // 指定がファイルならエラー
             if (is_file($this->logPath)) {

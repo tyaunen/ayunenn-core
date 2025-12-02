@@ -1,4 +1,4 @@
 {
-    "VIEW_PATH": "/RouterTest/view",
-    "404_PAGE_PATH": "/404.php"
+    "VIEW_DIR": "/RouterTest/view",
+    "404_PAGE_FILE": "/404.php"
 }

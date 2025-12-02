@@ -1,6 +1,6 @@
 {
-    "CONTROLLER_PATH": "/RouteTest/controller",
-    "VIEW_PATH": "/RouteTest/view",
-    "API_PATH": "/RouteTest/api",
+    "CONTROLLER_DIR": "/RouteTest/controller",
+    "VIEW_DIR": "/RouteTest/view",
+    "API_DIR": "/RouteTest/api",
     "404_VIEW_FILE": "/dummy_404.php"
 }

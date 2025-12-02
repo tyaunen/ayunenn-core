@@ -108,7 +108,7 @@ class Route
      */
     private function handleController(string $controller_path): void
     {
-        $file_path = $_SERVER['DOCUMENT_ROOT'] . rtrim(Config::getAppSetting('CONTROLLER_PATH'). '/') . "{$controller_path}.php";
+        $file_path = $_SERVER['DOCUMENT_ROOT'] . rtrim(Config::getAppSetting('CONTROLLER_DIR'). '/') . "{$controller_path}.php";
         if (!file_exists($file_path)) {
             throw new Exception("エラー: コントローラーファイルが見つかりません。（{$file_path}）");
         }
@@ -138,7 +138,7 @@ class Route
      */
     private function handleView(string $view_name): void
     {
-        $file_path = $_SERVER['DOCUMENT_ROOT'] . rtrim(Config::getAppSetting('VIEW_PATH'), '/') . "{$view_name}.php";
+        $file_path = $_SERVER['DOCUMENT_ROOT'] . rtrim(Config::getAppSetting('VIEW_DIR'), '/') . "{$view_name}.php";
         if (!file_exists($file_path)) {
             throw new Exception("エラー: ビューファイルが見つかりません。（{$file_path}）");
         }
@@ -155,7 +155,7 @@ class Route
      */
     private function handleApi(string $api_path): void
     {
-        $file_path = $_SERVER['DOCUMENT_ROOT'] . rtrim(Config::getAppSetting('API_PATH'). '/') . "{$api_path}.php";
+        $file_path = $_SERVER['DOCUMENT_ROOT'] . rtrim(Config::getAppSetting('API_DIR'). '/') . "{$api_path}.php";
         if (!file_exists($file_path)) {
             throw new Exception("エラー: APIファイルが見つかりません。（{$file_path}）");
         }
@@ -196,7 +196,7 @@ class Route
     public static function showNotFoundPage(): void
     {
         $view_name = Config::getAppSetting('404_VIEW_FILE');
-        $file_path = $_SERVER['DOCUMENT_ROOT'] . rtrim(Config::getAppSetting('VIEW_PATH'), '/') . "{$view_name}";
+        $file_path = $_SERVER['DOCUMENT_ROOT'] . rtrim(Config::getAppSetting('VIEW_DIR'), '/') . "{$view_name}";
         if (!file_exists($file_path)) {
             throw new Exception("エラー: 404ビューファイルが見つかりません。（{$file_path}）");
         }

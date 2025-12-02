@@ -54,7 +54,7 @@ function hbr(string $str): string
 /*
 function asset(string $asset_relative_path): string
 {
-    $base_url = rtrim(Config::getAppSetting('PUBLIC_PATH'), '/');
+    $base_url = rtrim(Config::getAppSetting('PUBLIC_DIR'), '/');
     return "{$base_url}/{$asset_relative_path}";
 }
 */

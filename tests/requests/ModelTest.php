@@ -17,7 +17,7 @@ class ModelTest extends TestCase
 
         // コンフィグファイルの設定上書き
         Config::$baseDirectory = __DIR__ . '/test_data';
-        Config::setConfigForUnitTest('app', 'MODEL_PATH', '/test_data');
+        Config::setConfigForUnitTest('app', 'MODEL_DIR', '/test_data');
 
         // phpunitでテストすると＄_SERVERの値がセットされないので上書きする
         $_SERVER['DOCUMENT_ROOT'] = __DIR__;

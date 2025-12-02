@@ -1,5 +1,5 @@
 {
-    "name": "ayutenn/core",
+    "name": "tyaunen/ayutenn-core",
     "description": "ayutennは、御茶請稔によるオレオレフレームワークです。第三者からの利用は想定していません。",
     "version": "1.0.0",
     "type": "library",

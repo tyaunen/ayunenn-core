@@ -56,6 +56,31 @@ class RouteTest extends TestCase
         $this->assertInstanceOf(Middleware::class, $route->middleware[1]);
     }
 
+    public function test_スラッシュ単体でも空白文字でもルートにマッチングできる(): void
+    {
+        $route = new Route(
+            method: 'GET',
+            path: '/',
+            routeAction: 'view',
+            targetResourceName: '/dummy_view',
+            middleware: []
+        );
+
+        $this->assertTrue($route->matches('GET', ''));
+        $this->assertTrue($route->matches('GET', '/'));
+
+        $route = new Route(
+            method: 'GET',
+            path: '',
+            routeAction: 'view',
+            targetResourceName: '/dummy_view',
+            middleware: []
+        );
+
+        $this->assertTrue($route->matches('GET', ''));
+        $this->assertTrue($route->matches('GET', '/'));
+    }
+
     public function test_ビューを起動(): void
     {
         $route = new Route(

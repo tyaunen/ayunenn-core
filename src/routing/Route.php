@@ -38,11 +38,12 @@ class Route
      */
     public function __construct(
         public string $method = 'GET',
-        public string $path = '',
+        public string $path = '/',
         public string $routeAction = 'view',
         public string $targetResourceName = 'top',
         public array $middleware = [],
     ) {
+        $this->path = rtrim($this->path, '/');
         $this->validateRoute();
     }
 
@@ -64,6 +65,7 @@ class Route
      */
     public function matches(string $request_method, string $request_uri): bool
     {
+        $request_uri = rtrim($request_uri, '/');
         return (strtoupper($this->method) === $request_method && $this->path === $request_uri);
     }
 

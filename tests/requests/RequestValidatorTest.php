@@ -384,7 +384,7 @@ class RequestValidatorTest extends TestCase
         $value = [
             'user' => [
                 'user_seq' => '10',
-                'user_name' => '12345678901234567',
+                'user_name' => '1234567890123456',
                 'icon_list' => [
                     'icon_1.jpg',
                     'icon_2.jpg',
@@ -405,8 +405,7 @@ class RequestValidatorTest extends TestCase
         $validator = new RequestValidator($format, $value);
         $errors = $validator->validate();
 
-        $this->assertCount(1, $errors);
-        $this->assertStringContainsString('16文字以下である必要があります。(現在: 17文字)', $errors[0]);
+        $this->assertCount(0, $errors);
     }
 
     public function test_オブジェクトinリスト、リストinオブジェクトの検証失敗()

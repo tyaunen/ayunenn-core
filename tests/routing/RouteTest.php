@@ -275,8 +275,11 @@ class RouteTest extends TestCase
             middleware: []
         );
 
+        // phpunitだと$_SERVERが設定されないので手書き
+        $_SERVER['HTTP_HOST'] = 'testhost';
+
         $route->executeRouteAction();
-        $this->assertSame('http://localhost/ayutenn/test_redirect_target', Redirect::$lastRedirectUrl);
+        $this->assertSame('http://testhost/ayutenn/test_redirect_target', Redirect::$lastRedirectUrl);
 
     }
 

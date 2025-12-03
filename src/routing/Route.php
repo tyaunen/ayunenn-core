@@ -188,7 +188,7 @@ class Route
     private function handleRedirect(string $redirect_path): void
     {
         http_response_code(200);
-        $top_dir = Config::getConfig("URL_BASE");
+        $top_dir = (empty($_SERVER['HTTPS']) ? 'http://' : 'https://') . $_SERVER['HTTP_HOST'] . Config::getAppSetting('PATH_ROOT');
         Redirect::redirect($top_dir . $redirect_path);
     }
 

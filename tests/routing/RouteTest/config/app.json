@@ -2,5 +2,6 @@
     "CONTROLLER_DIR": "/RouteTest/controller",
     "VIEW_DIR": "/RouteTest/view",
     "API_DIR": "/RouteTest/api",
-    "404_VIEW_FILE": "/dummy_404.php"
+    "404_VIEW_FILE": "/dummy_404.php",
+    "PATH_ROOT": "/ayutenn"
 }

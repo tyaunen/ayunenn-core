@@ -59,22 +59,19 @@ class Logger
     ];
 
     /**
-     * コンストラクタ（private: 外部から直接生成不可）
      *
      * @param string $log_path storageディレクトリ内のログのパス
      */
     private function __construct(?string $log_path = null)
     {
-        if (is_null($log_path)) {
-            $this->logPath = Config::getAppSetting('LOG_DIR');
-        } else {
-            // 指定がファイルならエラー
-            if (is_file($this->logPath)) {
-                throw new \Exception("ログ保存パスはディレクトリである必要があります: {$this->logPath}");
-            }
+        $this->logPath = $log_path;
 
-            $this->logPath = rtrim($log_path, '/') . '/';
+        // 指定がファイルならエラー
+        if (is_file($this->logPath)) {
+            throw new \Exception("ログ保存パスはディレクトリである必要があります: {$this->logPath}");
         }
+
+        $this->logPath = rtrim($log_path, '/') . '/';
 
         // ディレクトリがなければ作成
         if (!is_dir($this->logPath)) {

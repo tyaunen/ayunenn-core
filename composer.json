@@ -16,9 +16,6 @@
         "phpunit/phpunit": "^11.5"
     },
     "autoload": {
-        "files": [
-            "src/utils/view_helpers.php"
-        ],
         "psr-4": {
             "ayutenn\\core\\": "./src"
         }

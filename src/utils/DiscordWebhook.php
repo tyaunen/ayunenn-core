@@ -18,7 +18,9 @@ use ayutenn\core\config\Config;
  */
 class DiscordWebhook
 {
-    private $embeds = [];
+    public function __construct(
+        private array $embeds
+    ){}
 
     public function sendWebhook($webhookurl)
     {
